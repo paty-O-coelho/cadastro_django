@@ -15,16 +15,24 @@ Including another URLconf
 """
 
 from django.contrib import admin
+from django.contrib import auth
 from .views import hello
 from django.urls import path, include
 #mostrar as imagens em tempo de desenvolvimento (pequena gambiarra que so funciona em teste)
 from django.conf import settings
 from django.conf.urls.static import static
 from usuarios import urls as usuarios_urls
+from home import urls as home_urls
+from django.contrib.auth.views import LoginView 
+from django.contrib.auth.views import LogoutView 
+
 
 urlpatterns = [
+    path('', include(home_urls)),
     path('admin/', admin.site.urls),
     path('hello/', hello),
     path('person/',include(usuarios_urls)),
+    path('login/', LoginView.as_view(), name='login'),
+    # path('logout/', LogoutView.as_view(), name='logout'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 #ao final cocatena com o diretorio onde minhas imagens estão
