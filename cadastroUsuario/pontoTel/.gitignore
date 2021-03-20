@@ -1,0 +1,5 @@
+#tudo que eu não quero subir
+*.idea
+*.sqlite3
+*pyc
+media
