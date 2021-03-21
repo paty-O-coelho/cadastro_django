@@ -1,15 +1,41 @@
 {% extends 'base.html' %}
 
+
 {% block title %} Olá Visitante {% endblock %}
+<h1> Olá Visitante </h1>
 
 {% block main %}
-    <h1>Olá visitante</h1>
 
-    {% if user.is_authenticated %}
-        <p>Ola {{ user.username }}</p>
-        <a href="{% url 'logout' %}">Logout</a>
-    {% else %}
-        <a href="{% url 'login' %}">Login</a>
-    {% endif %}
+    <div class="row">
+        <div class="col">
+        
+        </div>
+        <div class="col-6">
+        
+        <h1>Olá visitante</h1>
+
+        </div>
+        <div class="col-5m">
+
+            {% if user.is_authenticated %}
+                <p>Ola {{ user.username }}</p>
+                <a href="{% url 'logout' %}">Logout</a>
+            {% else %}
+                <a href="{% url 'login' %}" class="btn btn-info">Login</a>
+            {% endif %}
+    
+        </div>
+    </div>
+
+
+
+{% endblock %}
+
+{% block footer %}
+<footer class="footer">
+    <div class="container">
+        <span class="text-muted"> Aplicação Criada para a PontoTel</span>
+    </div> 
+</footer>
 
 {% endblock %}
