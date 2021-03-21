@@ -13,6 +13,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - HTML
 - CSS
 - Postman
+- Postgresql
+- Bootstrap
 
 
 ## 💻 Projeto
