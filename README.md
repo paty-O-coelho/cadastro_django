@@ -22,7 +22,9 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 O objetivo desse projeto é realizar cadastro de usuários no sistema
 a partir de um admin (o único que poderá fazer as devidas manipulações nos usuários)
 onde o mesmo poderá inserir, editar e deletar os usuários. Também é possível conectar-se atrás do login e desconectar-se da aplicação
-através do logout. A aplicação está deployada atráves do Heroku neste link: https://usuarios-pontotel.herokuapp.com/
+através do logout. A aplicação está deployada atráves do Heroku neste 
+link: https://usuarios-pontotel.herokuapp.com/
+
 Nessa aplicação eu utilizei a framework Django para prover o backend.
 
 Feito por ♥ Patricia Coelho 
